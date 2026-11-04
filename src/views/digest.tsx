@@ -45,16 +45,21 @@ export function DigestPage({ night }: { night: DigestNight }) {
                 <tr class={m.length > 0 ? 'warn' : undefined}>
                   <td>
                     {row.job}
-                    {m.length > 0 && <strong> [WARN: {m.join(', ')}]</strong>}
+                    {m.length > 0 && (
+                      <>
+                        {' '}
+                        <strong class="mark">[WARN: {m.join(', ')}]</strong>
+                      </>
+                    )}
                   </td>
-                  <td>{row.owner ?? MISSING}</td>
+                  <td class="nowrap">{row.owner ?? MISSING}</td>
                   <td>{row.runs}</td>
                   <td>{row.retries}</td>
                   <td>{row.fails}</td>
                   <td>{row.lastStatus}</td>
                   <td class="err">{row.lastError ?? MISSING}</td>
-                  <td>{row.firstAt}</td>
-                  <td>{row.lastAt}</td>
+                  <td class="nowrap">{row.firstAt}</td>
+                  <td class="nowrap">{row.lastAt}</td>
                 </tr>
               );
             })}

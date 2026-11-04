@@ -10,12 +10,15 @@ const css = `
   body { margin: 0; font: 15px/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--fg); background: var(--bg); }
   header { display: flex; gap: 1.5rem; padding: .75rem 1.25rem; border-bottom: 1px solid var(--line); }
   header .marker { margin-left: auto; color: var(--mute); }
-  main { padding: 1.25rem; max-width: 60rem; }
+  main { padding: 1.25rem; max-width: 72rem; }
   table { border-collapse: collapse; width: 100%; }
   th, td { text-align: left; padding: .35rem .75rem .35rem 0; border-bottom: 1px solid var(--line); }
   th { color: var(--mute); font-weight: normal; }
   .warn { color: var(--warn); }
-  .err { overflow-wrap: anywhere; }
+  a { color: inherit; text-underline-offset: .2em; }
+  .err { overflow-wrap: break-word; }
+  .nowrap { white-space: nowrap; }
+  .mark { display: block; white-space: nowrap; }
   .mute { color: var(--mute); }
 `;
 
