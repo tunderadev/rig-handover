@@ -1,7 +1,7 @@
 import type { DigestNight, DigestRow } from '../digest/types.js';
 
 // The styleguide's missing-data mark (U+2014).
-export const MISSING = '—';
+export const MISSING = '\u2014';
 
 export const RETRY_MARK_AT = 3;
 

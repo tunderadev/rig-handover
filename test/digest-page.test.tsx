@@ -11,7 +11,7 @@ describe('digest page', () => {
     const html = await ok.text();
     expect(html).toContain('<header>');
     expect(html).toContain('did not parse');
-    expect(html).toContain('—');
+    expect(html).toContain('\u2014');
     const missing = await app.request('/digest/2026-01-01');
     expect(missing.status).toBe(404);
     expect(await missing.text()).toContain('<header>');
