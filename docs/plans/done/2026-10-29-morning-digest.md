@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-04
 ---
 
 # Morning digest
@@ -77,3 +78,19 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 2 | Run log reader | none | claude-code · opus-5.5 · default | 2026-11-04 |
+| 3 | Digest page: GET /digest/:night | #2 | claude-code · sonnet-5.5 · default | 2026-11-04 |
+| 4 | Digest JSON: GET /api/digest/:night | #2, #3 | claude-code · haiku-5.5 · default | 2026-11-04 |
+| 5 | Board links each night to its digest | #2, #3 | claude-code · sonnet-5.5 · default | 2026-11-04 |
+| 6 | Route tests for the digest page and JSON | #3, #4 | claude-code · haiku-5.5 · default | 2026-11-04 |
+| 7 | Preview for review | #3, #4, #5, #6 | claude-code · opus-5.5 · xhigh | 2026-11-04 |
+| 8 | Clean up the preview and the plan | #7, the review | claude-code · opus-5.5 · xhigh | 2026-11-04 |
+
+#1 is Renovate's setup pull request, not part of this plan. #7 was closed once when the link went
+out, before the reviewer had looked, and reopened until they had. The marker came off the preview
+after the review, and the first upload's deployment was deleted, so no copy with the marker is left.
